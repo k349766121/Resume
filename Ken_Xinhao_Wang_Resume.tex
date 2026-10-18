@@ -1,0 +1,155 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec, enumitem, fancyhdr, tabularx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.1pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}
+  {\vspace{-4pt}\scshape\raggedright\large}
+  {}{0em}{}
+  [\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small#4}
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in, label={}]
+}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\definecolor{linkblue}{RGB}{0,70,140}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  pdfborder={0 0 0}
+}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\scshape Ken (Xinhao) Wang}\\[2pt]
+  \small (647) 892-8886 $|$
+  \href{mailto:x256wang@uwaterloo.ca}{x256wang@uwaterloo.ca} $|$
+  \href{https://www.linkedin.com/in/xinhaokenwang/}{linkedin.com/in/xinhaokenwang}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of Waterloo}{\makebox[0pt][r]{Expected Graduation: Winter 2028}}
+    {Bachelor of Mathematics, \textbf{Computer Science \& Combinatorics and Optimization} (Co-op)}{Double Major}
+  \resumeItemListStart
+    \resumeItem{\textbf{Specialization}: Artificial Intelligence}
+    \resumeItem{\textbf{Relevant Coursework}: Data Structures, Algorithms, Operating Systems, Object-Oriented Software Development, Computer Organization, Machine Learning, Theory of Computing, Graph Theory, Optimization}
+    \resumeItem{\textbf{Cumulative Average}: 89.33\%}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}: C++, C, Python, JavaScript, Dart, Bash, HTML/CSS, R \\
+    \textbf{Frameworks \& Tools}: React, Flutter, Crow, Axios, Tailwind CSS, Material UI, MongoDB, Git \\
+    \textbf{Software Design}: Object-Oriented Programming, HTTP APIs, MVVM, Unit of Work, Concurrency
+  }}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Undergraduate Researcher}{Sept 2026 -- Present}
+    {University of Waterloo $|$ UR2PhD}{Waterloo, ON}
+  \resumeItemListStart
+    \resumeItem{Designing concurrent \textbf{search-path diagram (SPD)} construction in \textbf{C++} to accelerate quality assessment of \textbf{graph-based nearest-neighbor search}, supervised by Prof. Trevor Brown and mentored by Tom Lagovet.}
+    \resumeItem{Exploring \textbf{lock-free MultiQueue scheduling} over a \textbf{shared dynamic-programming table}, prioritizing tasks by distance from the start vertex to reduce contention and improve \textbf{multicore scalability}.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Developer Co-op}{May 2026 -- Aug 2026}
+    {Kore Solutions Inc. (HTS Engineering)}{Toronto, ON}
+  \resumeItemListStart
+    \resumeItem{Developed \textbf{cross-platform user interfaces} for an HVAC field service application using \textbf{Flutter} and \textbf{Dart}, translating UI/UX designs into reusable components for \textbf{iOS, Android, and Web}.}
+    \resumeItem{Integrated frontend features with \textbf{backend APIs} and used the \textbf{Unit of Work pattern} to coordinate related data changes, centralize persistence logic, and support \textbf{transactional consistency}.}
+    \resumeItem{Implemented frontend features within an \textbf{MVVM architecture}, separating presentation and application logic and using a centralized \textbf{Service Locator} to access shared services.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {CS135 Instructional Support Assistant}{Sept 2024 -- Dec 2024}
+    {University of Waterloo}{Waterloo, ON}
+  \resumeItemListStart
+    \resumeItem{Automated weekly assignment testing for \textbf{800+ students} using \textbf{Lintr} and \textbf{Bash} scripts, collaborating within a \textbf{9-member ISA team} to standardize grading.}
+    \resumeItem{Led weekly tutorials for \textbf{30+ students} on \textbf{functional programming} through live demonstrations and discussions, coordinating with professors and graduate TAs on course delivery.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\href{https://github.com/k349766121/Reversi}{\textbf{Reversi}} $|$ Strategy Board Game}{React.js, C++, Crow}
+\resumeItemListStart
+\resumeItem{Built a \textbf{React} interface and \textbf{C++} game engine supporting configurable boards, alternating turns, and winner reporting; used \textbf{RAII} for container storage management and \textbf{custom exceptions} to signal invalid moves.}
+\resumeItem{Developed \textbf{Crow HTTP APIs} for game initialization and move submission, connecting React through \textbf{Axios} and exchanging board state and game results as \textbf{JSON}.}
+\resumeItem{Implemented directional piece-flipping and display updates using the \textbf{Observer Pattern}, combining \textbf{class templates}, \textbf{multiple inheritance}, and \textbf{runtime polymorphism} to propagate notifications between cells and display observers.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------AWARDS-----------
+\section{Awards \& Scholarships}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{Labourers' Local 183 Scholarship Trust Fund Scholarship}}{Sept 2025}
+  \resumeItemListStart
+    \resumeItem{Awarded \textbf{\$7,500 over three years} for academic excellence and extracurricular contributions.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{University of Waterloo President's Scholarship of Distinction}}{Sept 2023}
+  \resumeItemListStart
+    \resumeItem{Awarded \textbf{\$2,000} for an admission average above \textbf{95\%}.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}

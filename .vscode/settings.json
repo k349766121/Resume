@@ -1,0 +1,18 @@
+{
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (PDF)",
+      "tools": ["latexmk"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "/Library/TeX/texbin/latexmk",
+      "args": ["-cd", "-pdf", "-outdir=%OUTDIR%", "%DOC%"]
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "tab"
+}
